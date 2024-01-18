@@ -11,10 +11,15 @@ const event = new EventEmitter();
 
 // Create own event
 
-event.addListener("subscribe",(channelName)=>{
-    console.log(`Thanks for Subscribing to ${channelName} `);
-})
+let subscribeMessage = (message) =>{
+    console.log(`Thanks For Subcribing ${message}`);
+
+}
+
+event.addListener("subscribe",subscribeMessage);
+
+event.emit("subscribe","My Channel!!");
 
 
-event.emit("subscribe","My channel!!")
+
 
