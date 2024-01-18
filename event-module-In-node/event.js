@@ -2,9 +2,18 @@
 
 // Require event module
 
+const { log } = require("console");
 const EventEmitter  = require("events");
 
 // Create object of EventEmitter class
 
 const event = new EventEmitter();
 
+// Create own event
+
+event.on("subscribe",(channelName)=>{
+    console.log(`Thanks for Subscribing to ${channelName} `);
+})
+
+
+event.emit("subscribe","My channel!!")
