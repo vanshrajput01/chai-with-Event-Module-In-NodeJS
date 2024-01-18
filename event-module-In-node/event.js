@@ -28,6 +28,21 @@ event.removeListener("subscribe",subscribeMessage);
 
 event.emit("subscribe","My Channel!!");
 
+// create another channel
+
+const greetingMessage = (message) =>{
+    console.log(`Hello, ${message}!!`);
+
+}
+
+event.addListener("loggedIn",greetingMessage);
+
+event.emit("loggedIn","Jack");
+
+event.emit("loggedIn","Alice");
+
+
+
 
 
 
