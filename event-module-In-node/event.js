@@ -20,6 +20,16 @@ event.addListener("subscribe",subscribeMessage);
 
 event.emit("subscribe","My Channel!!");
 
+event.emit("subscribe","other Channel!!");
+
+// remove Event
+
+event.removeListener("subscribe",subscribeMessage);
+
+event.emit("subscribe","My Channel!!");
+
+
+
 
 
 
