@@ -28,7 +28,7 @@ event.removeListener("subscribe",subscribeMessage);
 
 event.emit("subscribe","My Channel!!");
 
-// create another channel
+// create Example of Event Module in Node.JS
 
 const greetingMessage = (message) =>{
     console.log(`Hello, ${message}!!`);
